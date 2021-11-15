@@ -30,7 +30,11 @@ public class demo {
         System.out.println();
         printPlayCard(arrayCard2, "2");
         
-        int x = 0;
+        loopInput(arrayCard1,arrayCard2);
+        
+    }
+    
+    public static void loopInput(int[][] arrayCard1,int[][] arrayCard2){
         do{
             Scanner input = new Scanner(System.in);
             System.out.println("\nGame Host call (0 to exit): ");
@@ -41,9 +45,7 @@ public class demo {
             printPlayCard(arrayCard1, "1");
             System.out.println();
             printPlayCard(arrayCard2, "2");
-            x += 1;
-        } while(Checking(arrayCard1,arrayCard2)==false);
-        
+        } while(Checking(arrayCard1,arrayCard2) == false);
     }
     
     // print the card pattern
