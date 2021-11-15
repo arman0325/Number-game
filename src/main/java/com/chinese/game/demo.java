@@ -34,18 +34,23 @@ public class demo {
         
     }
     
+    //function of loop to input
     public static void loopInput(int[][] arrayCard1,int[][] arrayCard2){
         do{
             Scanner input = new Scanner(System.in);
             System.out.println("\nGame Host call (0 to exit): ");
             int num = input.nextInt();
+            //change the number in playcard
             changeNumber(arrayCard1, num);
             changeNumber(arrayCard2, num);
+            //end of change number function
+            //call print function
             System.out.println();
             printPlayCard(arrayCard1, "1");
             System.out.println();
             printPlayCard(arrayCard2, "2");
-        } while(Checking(arrayCard1,arrayCard2) == false);
+            //end of print function
+        } while(Checking(arrayCard1,arrayCard2) == false); // check the game is end
     }
     
     // print the card pattern
@@ -54,9 +59,9 @@ public class demo {
         for (int i = 0; i < arraylist.length; i++){
 		for (int j = 0; j < arraylist[i].length; j++){
                     if (arraylist[i][j]==0){
-                        System.out.printf("XX\t");
+                        System.out.printf("XX\t"); //print the XX in number of 0
                     }else{
-			System.out.printf("%s\t", arraylist[i][j]);
+			System.out.printf("%s\t", arraylist[i][j]); //print the number
                     }
 		}
 		System.out.println();
