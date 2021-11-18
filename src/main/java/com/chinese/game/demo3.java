@@ -87,9 +87,9 @@ public class demo3 {
     
     public static boolean condition(int[][] arraylist,int i){
         if ((arraylist[i][0] == 0 && arraylist[i][1] == 0 && arraylist[i][2] == 0 && arraylist[i][3] == 0 && arraylist[i][4] == 0) //Horizontal line
-                    || (arraylist[0][i] == 0 && arraylist[1][i] == 0 && arraylist[2][i] == 0 && arraylist[3][i] == 0 && arraylist[4][i] == 0) //Vertical line
-                    || (arraylist[0][0] == 0 && arraylist[1][1] == 0 && arraylist[2][2] == 0 && arraylist[3][3] == 0 && arraylist[4][4] == 0)  //Slash line
-                    || (arraylist[0][4] == 0 && arraylist[1][3] == 0 && arraylist[2][2] == 0 && arraylist[3][1] == 0 && arraylist[4][0] == 0) ){//Slash line
+            || (arraylist[0][i] == 0 && arraylist[1][i] == 0 && arraylist[2][i] == 0 && arraylist[3][i] == 0 && arraylist[4][i] == 0) //Vertical line
+            || (arraylist[0][0] == 0 && arraylist[1][1] == 0 && arraylist[2][2] == 0 && arraylist[3][3] == 0 && arraylist[4][4] == 0)  //Slash line
+            || (arraylist[0][4] == 0 && arraylist[1][3] == 0 && arraylist[2][2] == 0 && arraylist[3][1] == 0 && arraylist[4][0] == 0) ){//Slash line
             return true;
         }else{
             return false;
