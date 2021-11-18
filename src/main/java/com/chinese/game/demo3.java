@@ -73,10 +73,12 @@ public class demo3 {
             if (condition(arraylist1, i)){//Slash line
                 endGame = true;
                 System.out.println("Player1 Bingo!");//print message of win
+                break;
             }
             if (condition(arraylist2, i)){
                 endGame = true;
                 System.out.println("Player2 Bingo!");//print message of win
+                break;
             }
         }
         

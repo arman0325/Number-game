@@ -89,6 +89,7 @@ public class demo {
                     || (arraylist1[0][4] == 0 && arraylist1[1][3] == 0 && arraylist1[2][2] == 0 && arraylist1[3][1] == 0 && arraylist1[4][0] == 0) ){//Slash line
                 endGame = true;
                 System.out.println("Player1 Bingo!");//print message of win
+                break;
             }
             if ((arraylist2[i][0] == 0 && arraylist2[i][1] == 0 && arraylist2[i][2] == 0 && arraylist2[i][3] == 0 && arraylist2[i][4] == 0) 
                     || (arraylist2[0][i] == 0 && arraylist2[1][i] == 0 && arraylist2[2][i] == 0 && arraylist2[3][i] == 0 && arraylist2[4][i] == 0) 
@@ -96,6 +97,7 @@ public class demo {
                     || (arraylist2[0][4] == 0 && arraylist2[1][3] == 0 && arraylist2[2][2] == 0 && arraylist2[3][1] == 0 && arraylist2[4][0] == 0) ){
                 endGame = true;
                 System.out.println("Player2 Bingo!");//print message of win
+                break;
             }
         }
         return endGame;
