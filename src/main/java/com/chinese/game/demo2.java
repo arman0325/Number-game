@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author arman
  */
-public class demo {
+public class demo2 {
     public static void main(String args[]){
         int [][] arrayCard1 ={  {24, 2, 8, 1, 25},
                                 {12, 16, 7, 17, 15},
@@ -26,9 +26,9 @@ public class demo {
                                 {25, 23, 13, 19, 11},
                                 {22, 4, 9, 1, 2}};
         
-        printPlayCard(arrayCard1, "1");
+        printPlayCard(arrayCard1, 99); // 99 will not change the number
         System.out.println();
-        printPlayCard(arrayCard2, "2");
+        printPlayCard(arrayCard2, 99); // 99 will not change the number
         
         loopInput(arrayCard1,arrayCard2);
         
@@ -38,26 +38,24 @@ public class demo {
     public static void loopInput(int[][] arrayCard1,int[][] arrayCard2){
         do{
             Scanner input = new Scanner(System.in);
-            System.out.println("\nGame Host call (0 to exit): ");
+            System.out.println("Game Host call (0 to exit): ");
             int num = input.nextInt();
-            //change the number in playcard
-            changeNumber(arrayCard1, num);
-            changeNumber(arrayCard2, num);
-            //end of change number function
-            //call print function
-            System.out.println();
-            printPlayCard(arrayCard1, "1");
-            System.out.println();
-            printPlayCard(arrayCard2, "2");
+            //call change and print function
+            System.out.println("Player1's Card:");
+            printPlayCard(arrayCard1, num);
+            System.out.println("Player2's Card:");
+            printPlayCard(arrayCard2, num);
             //end of print function
         } while(Checking(arrayCard1,arrayCard2) == false); // check the game is end
     }
     
     // print the card pattern
-    public static void printPlayCard(int[][] arraylist,String name){
-	System.out.println("Player" + name +"'s Card:");
+    public static void printPlayCard(int[][] arraylist, int num){
         for (int i = 0; i < arraylist.length; i++){
             for (int j = 0; j < arraylist[i].length; j++){
+                if (arraylist[i][j]==num){
+                    arraylist[i][j] = 0;
+                }
                 if (arraylist[i][j]==0){
                     System.out.printf("XX\t"); //print the XX in number of 0
                 }else{
@@ -68,16 +66,6 @@ public class demo {
 	}
     }
     
-    // For change the array to 0
-    public static void changeNumber(int[][] arraylist, int num){
-        for (int i = 0; i < arraylist.length; i++){
-            for (int j = 0; j < arraylist[i].length; j++){
-                if (arraylist[i][j]==num){
-                    arraylist[i][j] = 0;
-                }
-            }
-	}
-    }
 
     // For checking the game is finish
     public static boolean Checking(int[][] arraylist1, int[][] arraylist2){
