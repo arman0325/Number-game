@@ -70,8 +70,6 @@ public class demo2 {
     // For checking the game is finish
     public static boolean Checking(int[][] arraylist1, int[][] arraylist2){
         boolean endGame = false; // the game is finish
-        boolean player1Win = false; // player 1 win
-        boolean player2Win =false;  // player 2 win
         for (int i = 0; i < 5;i++){ //loop for each line
             if ((arraylist1[i][0] == 0 && arraylist1[i][1] == 0 && arraylist1[i][2] == 0 && arraylist1[i][3] == 0 && arraylist1[i][4] == 0) //Horizontal line
                     || (arraylist1[0][i] == 0 && arraylist1[1][i] == 0 && arraylist1[2][i] == 0 && arraylist1[3][i] == 0 && arraylist1[4][i] == 0) //Vertical line

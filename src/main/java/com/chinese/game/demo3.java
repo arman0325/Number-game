@@ -69,8 +69,6 @@ public class demo3 {
     // For checking the game is finish
     public static boolean Checking(int[][] arraylist1, int[][] arraylist2){
         boolean endGame = false; // the game is finish
-        boolean player1Win = false; // player 1 win
-        boolean player2Win =false;  // player 2 win
         for (int i = 0; i < 5;i++){ //loop for each line
             if (condition(arraylist1, i)){//Slash line
                 endGame = true;
